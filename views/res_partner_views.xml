@@ -1,0 +1,70 @@
+<odoo>
+    <record id="view_partner_form_inherit_extra_info" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.extra.info</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Mas Informacion bancaria">
+                    <group>
+                        <group>
+                            <field name="Formadepago"/>
+                            <field name="Direccionbanco"/>
+                            <field name="Poblacionbanco"/>
+                            <field name="Provinciabanco"/>
+                        </group>
+                        <group>
+                            <field name="Paisbanco"/>
+                            <field name="Iban"/>
+                            <field name="Bic"/>
+                            <field name="Codigodivisa"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Mas información de contacto">
+                    <group>
+                        <group>
+                            <field name="Telefono1"/>
+                            <field name="Fax"/>
+                            <field name="Personacontacto"/>
+                            <field name="Aptdocorreos"/>
+                            <field name="Representante1"/>
+                        </group>
+                        <group>
+                            <field name="Representante2"/>
+                            <field name="Telefonorep1"/>
+                            <field name="Prefijo"/>
+                            <field name="Cpextranjero"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Mas información">
+                                    <group>
+                        <group>
+                            <field name="Codigoproveedor"/>
+                            <field name="Codigocontable"/>
+                            <field name="Nombrecomercial"/>
+                            <field name="Codigoformapago"/>
+                            <field name="ProveedorCEE"/>
+                            <field name="Codigogrupo"/>
+                        </group>
+                        <group>
+                            <field name="Grupocompras"/>
+                            <field name="Ivafijo"/>
+                            <field name="Acreedor"/>
+                            <field name="Registrosanitario"/>
+                            <field name="Exentoiva"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
+
+
+
+
+
+
