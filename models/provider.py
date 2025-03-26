@@ -1,7 +1,9 @@
 from odoo import models, fields
-class ResPartner (models.Model):
+
+class ResPartner(models.Model):
     _inherit = 'res.partner'
     
+    supplier_rank= fields.Integer(string="supplier Rank")
     #Informacion extra
     Codigoproveedor= fields.Char(string="Codigoproveedor")
     Codigocontable= fields.Char(string="Codigocontable")
@@ -35,41 +37,36 @@ class ResPartner (models.Model):
     Telefonorep1= fields.Char(string="Telefonorep1")
     Prefijo= fields.Char(string="Prefijo")
     Cpextranjero= fields.Char(string="Cpextranjero")
-    
-    
-    #Observaciones= fields.Char(string="")
-    
-    
-
-
-
-    #Preparacion para la base de datos
-#ALTER TABLE res.partner
-#ADD COLUMN Codigoproveedor VARCHAR,
-#ADD COLUMN Codigocontable VARCHAR,
-#ADD COLUMN Telefono1 VARCHAR,
-#ADD COLUMN Fax VARCHAR,
-#ADD COLUMN Personacontacto VARCHAR,
-#ADD COLUMN Formadepago VARCHAR,
-#ADD COLUMN Direccionbanco VARCHAR,
-#ADD COLUMN Poblacionbanco VARCHAR,
-#ADD COLUMN Provinciabanco VARCHAR,
-#ADD COLUMN Paisbanco VARCHAR,
-#ADD COLUMN Nombrecomercial VARCHAR,
-#ADD COLUMN Codigoformapago VARCHAR,
-#ADD COLUMN ProveedorCEE VARCHAR,
-#ADD COLUMN Codigogrupo VARCHAR,
-#ADD COLUMN Grupocompras VARCHAR,
-#ADD COLUMN Aptdocorreos VARCHAR,
-#ADD COLUMN Ivafijo VARCHAR,
-#ADD COLUMN Acreedor VARCHAR,
-#ADD COLUMN Representante1 VARCHAR,
-#ADD COLUMN Representante2 VARCHAR,
-#ADD COLUMN Telefonorep1 VARCHAR,
-#ADD COLUMN Prefijo VARCHAR,
-#ADD COLUMN Cpextranjero VARCHAR,
-#ADD COLUMN Iban VARCHAR,
-#ADD COLUMN Bic VARCHAR,
-#ADD COLUMN Codigodivisa VARCHAR,
-#ADD COLUMN Registrosanitario VARCHAR,
-#ADD COLUMN Exentoiva VARCHAR;
+    # Campo booleano para controlar si la página es visible o no
+    show_bank_page = fields.Boolean(name="page_bank_info") 
+#Observaciones= fields.Char(string="")
+#Preparacion para la base de datos
+        #ALTER TABLE res.partner
+        #ADD COLUMN Codigoproveedor VARCHAR,
+        #ADD COLUMN Codigocontable VARCHAR,
+        #ADD COLUMN Telefono1 VARCHAR,
+        #ADD COLUMN Fax VARCHAR,
+        #ADD COLUMN Personacontacto VARCHAR,
+        #ADD COLUMN Formadepago VARCHAR,
+        #ADD COLUMN Direccionbanco VARCHAR,
+        #ADD COLUMN Poblacionbanco VARCHAR,
+        #ADD COLUMN Provinciabanco VARCHAR,
+        #ADD COLUMN Paisbanco VARCHAR,
+        #ADD COLUMN Nombrecomercial VARCHAR,
+        #ADD COLUMN Codigoformapago VARCHAR,
+        #ADD COLUMN ProveedorCEE VARCHAR,
+        #ADD COLUMN Codigogrupo VARCHAR,
+        #ADD COLUMN Grupocompras VARCHAR,
+        #ADD COLUMN Aptdocorreos VARCHAR,
+        #ADD COLUMN Ivafijo VARCHAR,
+        #ADD COLUMN Acreedor VARCHAR,
+        #ADD COLUMN Representante1 VARCHAR,
+        #ADD COLUMN Representante2 VARCHAR,
+        #ADD COLUMN Telefonorep1 VARCHAR,
+        #ADD COLUMN Prefijo VARCHAR,
+        #ADD COLUMN Cpextranjero VARCHAR,
+        #ADD COLUMN Iban VARCHAR,
+        #ADD COLUMN Bic VARCHAR,
+        #ADD COLUMN Codigodivisa VARCHAR,
+        #ADD COLUMN Registrosanitario VARCHAR,
+        #ADD COLUMN Exentoiva VARCHAR;

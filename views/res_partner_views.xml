@@ -5,55 +5,56 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
-                <page string="Mas Informacion bancaria">
+                <field name="supplier_rank" invisible="1"/>
+                <page string="Mas Informacion bancaria" name="page_provider_bank_more_info" invisible="supplier_rank==0">
                     <group>
                         <group>
-                            <field name="Formadepago"/>
-                            <field name="Direccionbanco"/>
-                            <field name="Poblacionbanco"/>
-                            <field name="Provinciabanco"/>
+                            <field name="Formadepago" string="Forma de pago"/>
+                            <field name="Direccionbanco" string="Dirección del banco"/>
+                            <field name="Poblacionbanco" string="Ciudad del banco"/>
+                            <field name="Provinciabanco" string="Provincia del banco"/>
                         </group>
                         <group>
-                            <field name="Paisbanco"/>
-                            <field name="Iban"/>
-                            <field name="Bic"/>
-                            <field name="Codigodivisa"/>
+                            <field name="Paisbanco" string="País del banco"/>
+                            <field name="Iban" string="IBAN"/>
+                            <field name="Bic" string="BIC"/>
+                            <field name="Codigodivisa" string="Codigo de divisa"/>
                         </group>
                     </group>
                 </page>
-                <page string="Mas información de contacto">
+                <page string="Mas información de contacto" name="page_provider_contact_more_info" invisible="supplier_rank==0">
                     <group>
                         <group>
-                            <field name="Telefono1"/>
-                            <field name="Fax"/>
-                            <field name="Personacontacto"/>
-                            <field name="Aptdocorreos"/>
-                            <field name="Representante1"/>
+                            <field name="Telefono1" string="Telefono 1"/>
+                            <field name="Fax" string="Fax"/>
+                            <field name="Personacontacto" string="Persona de contacto"/>
+                            <field name="Aptdocorreos" string="Apartado de correos"/>
+                            <field name="Representante1" string="Representante 1"/>
                         </group>
                         <group>
-                            <field name="Representante2"/>
-                            <field name="Telefonorep1"/>
-                            <field name="Prefijo"/>
-                            <field name="Cpextranjero"/>
+                            <field name="Representante2" string="Representante 2"/>
+                            <field name="Telefonorep1" string="Telefono representante 1"/>
+                            <field name="Prefijo" string="Prefijo telefonico"/>
+                            <field name="Cpextranjero" string="Codigo postal extranjero"/>
                         </group>
                     </group>
                 </page>
-                <page string="Mas información">
-                                    <group>
+                <page string="Mas información del proveedor" name="page_provider_more_info" invisible="supplier_rank==0">
+                    <group>
                         <group>
-                            <field name="Codigoproveedor"/>
-                            <field name="Codigocontable"/>
-                            <field name="Nombrecomercial"/>
-                            <field name="Codigoformapago"/>
-                            <field name="ProveedorCEE"/>
-                            <field name="Codigogrupo"/>
+                            <field name="Codigoproveedor" string="Codigo de proveedor"/>
+                            <field name="Codigocontable" string="Codigo contable"/>
+                            <field name="Nombrecomercial" string="Nombre comercial"/>
+                            <field name="Codigoformapago" string="Codigo Forma de Pago"/>
+                            <field name="ProveedorCEE" string="¿Es proveedor CEE?"/>
+                            <field name="Codigogrupo" string="Codigo de grupo"/>
                         </group>
                         <group>
-                            <field name="Grupocompras"/>
-                            <field name="Ivafijo"/>
-                            <field name="Acreedor"/>
-                            <field name="Registrosanitario"/>
-                            <field name="Exentoiva"/>
+                            <field name="Grupocompras" string="Grupo de compras"/>
+                            <field name="Ivafijo" string="¿IVA fijo?"/>
+                            <field name="Acreedor" string="¿Acreedor?"/>
+                            <field name="Registrosanitario" string="Registro sanitario"/>
+                            <field name="Exentoiva" string="¿Exento de IVA?"/>
                         </group>
                     </group>
                 </page>
@@ -61,10 +62,3 @@
         </field>
     </record>
 </odoo>
-
-
-
-
-
-
-
